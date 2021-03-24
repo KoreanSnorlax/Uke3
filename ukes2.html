@@ -6,61 +6,94 @@
     <title>Ukesoppgave 2</title>
     <style>
         body{
-            background-color: rgb(211, 179, 147);
+            background-color: hotpink;
             margin:0;
             padding:0;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
+    <h1>Team 1 Gruppeoppgave uke 2 Hitorie!</h1>
     <div id="app"></div>
 
     <!-- Historie tid:
-    Det var en gang en hacker som mistet hunden sin, en historie jeg nå skal fortelle dere.
-    
--Mik
-His -friends- saw him as a -joyous-, jealous -juggler-. 
-Once, he had even helped a -naughty- puppy cross the road. 
-That's the sort of -man- he was.
+    Det var en gang en -hacker- som mistet -hunden- sin, en -historie- jeg nå skal -fortelle- dere.
+    Hunden var en sprudlende liten kar, som alltid likte å ha det gøy.
 
--Chris- gazed with the affection of 5157 incredible pong -pigeons-. 
-He said, in hushed tones, "I love you and I want hug."
 
--Mikael- looked back, even more -fuzzy- and still fingering the damp -guillotine-. 
-"-Chris-, I ate your -puppy-" he replied.
-    
+    Knapper for hvert ord, som skal legges inn ved blanke steder i teksten.
+    Knapper til å velge navn.
+    Adjektiv historie
+    __ 
 
+    Funksjoner:
+    onclick: this - Flytter order til mellomrommet i setningene. - mellomrom 1 har id ord1, mellomrom 2 har id ord2 ++++
+
+
+    Navna våres, som variabler. 
+
+    View:
+    teksten, 
+
+
+
+
+-->
     
-    -->
 
     <script>
         // model
+
+        //variabler, navn, ord etc.
+        //var navn = "Mikael";
+        var navn1 = "____";
+        var navn2 = "____";
+        var navn3 = "____";
+        var navn4 = "____";
         
 
         // view 
         updateView();
-        function updateView(){
+
+        function updateView(){               //Her lager vi en div for hvert ord, så kan vi legge inn ordet ved å bruke document.getElementById('ord').innerHTML = 
             document.getElementById('app').innerHTML = `
-
-            
-            
-            
-            
-            
+            <div class="historie">
+                <h2>Det var en gang en
+                <div id="ord1">${navn1}</div> 
+                som mistet
+                <div id="ord2">${navn2}</div>
+                sin, en
+                <div id="ord3">____</div>
+                jeg nå skal
+                <div id="ord4">____</div>
+                dere.
+                
+                
+                
+                
+                </h2>
+            </div>             
+            <button id="N1" onclick="placeName(this)">Alexander</button>
+            <button id="N2" onclick="placeName(this)">Hackerman</button>
+            <button id="N3" onclick="placeName(this)">Malene</button>
+            <button id="N4" onclick="placeName(this)">Mikael</button>
             `
-
         }
 
 
         // controller
-        function endreFarge(){
-            document.getElementById('app').style.backgroundColor = 'blue';
+        function placeName(name){
+            navn1 = name.innerHTML;
             updateView();
         }
-        function endrePåTing(){
-
+        function placeName2(name) {
+          navn2 = name.innerHTML;
+          updateView();  
         }
+
+
         
 
 
